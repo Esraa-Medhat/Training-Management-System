@@ -1,0 +1,39 @@
+﻿@model Training_Management_System.PLL.DTOS.GradeDto
+
+@{
+    ViewData["Title"] = "Add New Grade";
+}
+
+<h1>Add New Grade</h1>
+
+<form asp-action="Create" asp-controller="Grade" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="Id"></label>
+        <input class="form-control" asp-for="Id" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="TraineeName"></label>
+        <input class="form-control" asp-for="TraineeName" />
+        <span asp-validation-for="TraineeName" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="SessionId"></label>
+        <input class="form-control" asp-for="SessionId" />
+        <span asp-validation-for="SessionId" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="Value"></label>
+        <input class="form-control" asp-for="Value" />
+        <span asp-validation-for="Value" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-controller="Grade" asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</form>
+
+

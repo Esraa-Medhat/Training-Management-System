@@ -1,0 +1,36 @@
+﻿@model SessionDto
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Session</h1>
+<form action="Create" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+  
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="Id"></label>
+        <input class="form-control" asp-for="Id" />
+        <span asp-validation-for="Id"class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="CourseId"></label>
+        <input class="form-control" asp-for="CourseId" />
+        <span asp-validation-for="CourseId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="StartDate"></label>
+        <input class="form-control" asp-for="StartDate" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label" asp-for="EndDate"></label>
+        <input class="form-control" asp-for="EndDate" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+    <div>
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-controller="Session" asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</form>
+
